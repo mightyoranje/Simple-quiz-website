@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizBuzz</title>
+    <link rel="stylesheet" href="mcq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">QuizBuzz</a>
+        <nav>
+            <a href="#" class="navi">Home</a>
+            <a href="#" class="navi">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <p style="margin-bottom: 10px;font-size: 20px; position:fixed;top:0;left:0;
+        transform: translate(20px, 50px);color:white;z-index: 1;">QuizBuzz is a really simple quiz website</p>
+        <div class="center">
+
+            <p style="margin-bottom: 10px;font-size: 20px;text-align: center;color:white;">so what do you wanna do?</p>
+
+            <button onclick="myQuestion()" class="random">Answer a random question</button>
+
+            <button class="cateogory" onclick="selectCat()">Choose Cateorgy?</button>
+        </div>
+    </div>
+    
+
+    <div class="popup" id="p2">
+        <div class="info">
+            <h1 style="text-align: center;font-size: 30px;">Random quiz</h1>
+            <p id="q" class="question" style="text-align: center;font-size: 20px;"></p>
+        </div>
+        <div class="mccq">
+            <div class="mcq">
+                <button id="o1" onclick="answer()">option 1</button>
+                <button id="o2" onclick="answer()">option 2</button>
+            </div>
+            <div class="mcq">
+                <button id="o3" onclick="answer()">option 3</button>
+                <button id="o4" onclick="answer()">option 4</button>
+            </div>
+        </div>
+        <div class="next">
+            <button onclick="exit1()">Exit</button>
+        </div>
+    </div>
+
+    <div class="cat" id="cat">
+        <div class="info">
+            <h1 style="text-align: center;font-size: 30px;">Choose Cateogory</h1>
+        </div>
+        <div class="mcq">
+            <button class="cat1" onclick="sub1()">Subject 1</button>
+            <button class="cat2" onclick="sub2()">Subject 2</button>
+        </div>
+        <div class="next">
+            <button onclick="exit2()">Exit</button>
+        </div>
+    </div>
+
+    <div class="diff" id="diff">
+        <div class="info">
+            <h1 style="text-align: center;font-size: 30px;">Choose difficulty</h1>
+        </div>
+        <div class="mcq">
+            <button class="cat1" onclick="easy()">Easy questions 🍭</button>
+            <button class="cat2" onclick="hard()">Hard questions 🐲</button>
+        </div>
+        <div class="next">
+            <button onclick="exit3()">Exit</button>
+        </div>
+    </div>
+
+    <div class="frame" id="frame">
+        <div>
+            <h1 style="text-align: center;font-size: 30px;">quiz</h1>
+            <p id="g" class="question" style="text-align: center;font-size: 20px;"></p>
+        </div>
+        <div class="mccq">
+            <div class="mcq">
+                <button id="k1" onclick="op(k1)">option 1</button>
+                <button id="k2" onclick="op(k2)">option 2</button>
+            </div>
+            <div class="mcq">
+                <button id="k3" onclick="op(k3)">option 3</button>
+                <button id="k4" onclick="op(k4)">option 4</button>
+            </div>
+        </div>
+        <div class="next">
+            <button onclick="exit4()">Exit</button><button onclick="start()" id="lm"> Next Question </button>
+        </div>
+    </div>
+
+    <div class="res" id="res">
+        <div class="info">
+            <h1 style="text-align: center;font-size: 30px;">Result</h1>
+        </div>
+        <div class="mcq">
+            <p id="result"></p><p>/3</p>
+        </div>
+        <div class="next">
+            <button onclick="exit5()">Exit</button>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <div class="boxx">💸
+            <p style="margin-top: 40px; text-align: center;font-size: 30px;">open source</p>
+        </div>
+        <div class="boxx">🐛
+            <p style="margin-top: 40px; text-align: center;font-size: 30px;">choose from multiple cateogries</p>
+        </div>
+        <div class="boxx">🤓
+            <p style="margin-top: 40px; text-align: center;font-size: 30px;">you can set difficulty</p>
+        </div>
+    </div>
+
+    <div class="credits">
+        Thanks for viewing my website.
+        <br>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+
+
+    <script async src="java.js" type="text/javascript" ></script>
+</body>
+</html>
